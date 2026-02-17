@@ -1,0 +1,114 @@
+.headersection{
+    background-color: #dddddd6e;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1250px;
+    margin: 0 auto;
+    min-height: 65px;
+    position: relative; 
+}
+.nav_button{
+    cursor: pointer;
+    display: none;
+}
+.line{
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 54px;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1px white;
+    text-transform: uppercase;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-width: min-content;
+}
+li{
+    list-style: none;
+    margin: 0 10px;
+}
+
+li a{
+    text-decoration: none;
+    font-weight: 600;
+    font-size: large;
+    background-color: rgba(0, 0, 0, 0.37);
+    color: rgb(250, 250, 250);
+    padding: 6px 20px;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+    display: block;
+    border: 2px solid rgb(255, 255, 255);
+}
+li a:hover{
+    text-decoration: none;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.678);
+    color: rgb(255, 255, 255);
+    transition: all 0.2s ease-in-out;
+}
+
+/* CSS For Tablet Device*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    header{
+        flex-direction: row;
+        align-items: center;
+    }
+    .logo{
+        /* margin-bottom: 10px; */
+        margin-left: 10px;
+    }
+    ul{
+        justify-content: center;
+    }
+    nav{
+        display: none;
+    }
+    .nav_button{
+        cursor: pointer;
+        display: block;
+        margin-right: 20px;
+    }
+}
+/* CSS For Mobile Device*/
+@media screen and (max-width: 767px) {
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo{
+        margin-bottom: 10px;
+    }
+    ul{
+        justify-content: center;
+        flex-direction: column;
+        display: none;
+    }
+    nav{
+        display: none;
+    }
+    .nav_button{
+        cursor: pointer;
+        display: block;
+        margin-right: 20px;
+    }
+    
+}
